@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Emmanuel B. Lodor — Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- PROGRESS BAR -->
+    <div id="progressBar"></div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="navbar">
+        <div class="logo">CEL<span>.</span></div>
+        <nav id="mainNav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#journey">Journey</a>
+            <a href="#seminars">Seminars</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#certificates">Certificates</a>
+        </nav>
+        <div class="nav-controls">
+            <button id="themeToggle" class="icon-btn" aria-label="Toggle Theme">🌓</button>
+            <button id="menuToggle" class="icon-btn mobile-only" aria-label="Toggle Navigation">☰</button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <h1>Hello, I'm <br><span class="highlight">Christian Emmanuel B. Lodor.</span></h1>
+            <p class="hero-description">
+                A student, learner, and explorer documenting the experiences, seminars, tours, and lessons that continue to shape my journey in Information Technology.
+            </p>
+            <div class="hero-actions">
+                <a href="#seminars" class="btn primary">Explore My Experiences →</a>
+                <a href="#about" class="btn secondary">Get to Know Me</a>
+            </div>
+        </div>
+
+        <div class="hero-visual">
+            <div class="badge badge-top">✦ Lifelong Learner</div>
+            
+            <!-- PROFILE PICTURE FRAME -->
+            <div class="photo-frame">
+                <img src="My Picture.png" alt="Christian Emmanuel B. Lodor" class="profile-img">
+            </div>
+
+            <div class="badge badge-bottom">ST1 · Seminars & Tours</div>
+        </div>
+    </section>
+
+    <!-- STATS COUNTER -->
+    <section class="stats-bar">
+        <div class="stat-item">
+            <h2 id="seminarCount">0</h2>
+            <p>SEMINARS</p>
+        </div>
+        <div class="stat-item">
+            <h2 id="albumCount">0</h2>
+            <p>ALBUMS</p>
+        </div>
+        <div class="stat-item">
+            <h2 id="certificateCount">0</h2>
+            <p>CERTIFICATES</p>
+        </div>
+    </section>
+
+    <!-- SEMINARS SECTION -->
+    <section id="seminars" class="section">
+        <div class="section-header">
+            <h2>Seminars & Tour Experiences</h2>
+            <p>Filter by category or search through my documented learning events.</p>
+        </div>
+
+        <div class="controls-bar">
+            <div id="filters" class="filter-group"></div>
+            <input type="text" id="searchInput" placeholder="Search experiences..." class="search-input">
+        </div>
+
+        <div id="experienceGrid" class="grid"></div>
+    </section>
+
+    <!-- GALLERY / ALBUMS SECTION -->
+    <section id="gallery" class="section">
+        <div class="section-header">
+            <h2>Photo Albums</h2>
+            <p>Browse through image collections from seminars and educational visits.</p>
+        </div>
+        <div id="albumGrid" class="grid"></div>
+    </section>
+
+    <!-- CERTIFICATES SECTION -->
+    <section id="certificates" class="section">
+        <div class="section-header">
+            <h2>Certificates & Badges</h2>
+            <p>Official certifications and proof of participation.</p>
+        </div>
+        <div id="certificateGrid" class="grid"></div>
+    </section>
+
+    <!-- EXPERIENCE MODAL -->
+    <div id="experienceModal" class="modal" aria-hidden="true">
+        <div class="modal-card">
+            <button id="modalClose" class="close-btn">&times;</button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- LIGHTBOX FOR PHOTOS -->
+    <div id="lightbox" class="lightbox">
+        <button id="lightboxClose" class="close-btn">&times;</button>
+        <button id="prevPhoto" class="nav-btn prev">❮</button>
+        <div class="lightbox-content">
+            <img id="lightboxImage" src="" alt="Album photo">
+            <p id="lightboxCaption"></p>
+        </div>
+        <button id="nextPhoto" class="nav-btn next">❯</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
